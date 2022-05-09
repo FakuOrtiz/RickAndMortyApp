@@ -11,7 +11,7 @@ export default function NavBar({onSearch}) {
           e.preventDefault()
           onSearch(nombre)
           }}>
-          <input placeholder="Buscar personaje..." type="text" class="input" onChange={e => setNombre(e.target.value)} />
+          <input placeholder="Buscar personaje..." type="text" className="input" onChange={e => setNombre(e.target.value)} />
         </form>
     </div>
   )
