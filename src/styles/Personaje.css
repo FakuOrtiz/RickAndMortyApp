@@ -1,0 +1,32 @@
+.contenedorPersonaje {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 0;
+    width: 220px;
+    height: 220px;
+    background-color: #fafd7cff;
+}
+
+.nombre {
+    margin: auto;
+}
+
+.info {
+    margin: auto;
+}
+
+img {
+    margin: 10px auto;
+    width: 150px;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+hr {
+    color: red;
+}
