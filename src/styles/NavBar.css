@@ -11,7 +11,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #fb6467ff;
-    margin: 0;
+    margin: 0 auto;
 }
 
 form {
@@ -24,17 +24,24 @@ form {
     margin: 10px 50px;
 }
 
+.tituloNavLink {
+    font-family: 'Creepster', cursive;
+    font-size: 30px;
+    color: #24325FFF;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 687px) {
     .titulo {
-        margin: 10px auto;
+        margin: auto;
         text-align: center;
     }
     form {
         text-align: right;
-        margin: 0 auto;;
+        margin: 0 auto;
     }
     input.input {
-        margin-top: 13px;
+        margin-top: 17px;
         margin-right: 5px;
     }
 }
@@ -43,24 +50,24 @@ form {
 .input {
     line-height: 28px;
     border: 2px solid transparent;
-    border-bottom-color: black;
+    border-bottom-color: #24325FFF;
     padding: .2rem 0;
     outline: none;
     background-color: transparent;
-    color: black;
+    color: #24325FFF;
     transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    margin-top: 2px;
+    margin-top: 8px;
 }
    
 .input:focus, input:hover {
     outline: none;
     padding: .2rem 1rem;
     border-radius: 1rem;
-    border-color: black
+    border-color: #24325FFF
 }
    
 .input::placeholder {
-    color: black
+    color: #24325FFF
 }
    
 .input:focus::placeholder {

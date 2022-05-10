@@ -1,14 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "../styles/Personaje.css"
 
-export default function Personaje({name, img}) {
-  console.log(name)
-  console.log(img);
+export default function Personaje({name, img, id}) {
   return (
+    <Link to={`/personaje/${id}`} className="linkTarjeta">
       <div className="contenedorPersonaje">
-        {console.log("hola")}
-          <img src={img} />
+          <img className='imagenTarjeta' src={img} />
           <h5 className='nombre'>{name}</h5>
       </div>
+    </Link>
   )
 }

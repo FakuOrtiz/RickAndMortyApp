@@ -18,14 +18,14 @@ export default function Paginacion({ prev, next, onPrev, onNext }) {
           <li className="prev">
             <button onClick={handlePrev}>Prev</button>
           </li>
-        : null
+        : <div className="prev"></div>
         }
         {
         next ?
           <li className="next">
             <button onClick={handleNext}>Next</button>
           </li>
-        : null
+        : <div className="next"></div>
         }
       </ul>
     </nav>

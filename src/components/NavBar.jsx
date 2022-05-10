@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import "../styles/NavBar.css";
 
 export default function NavBar({onSearch}) {
@@ -6,7 +7,7 @@ export default function NavBar({onSearch}) {
 
   return (
     <div className="contenedor">
-        <h3 className='titulo'>RICK AND MORTY APP</h3>
+        <h3 className='titulo'><NavLink className="tituloNavLink" to="/">RICK AND MORTY APP</NavLink></h3>
         <form onSubmit={e => {
           e.preventDefault()
           onSearch(nombre)

@@ -20,13 +20,26 @@
     margin: auto;
 }
 
-img {
+.imagenTarjeta {
     margin: 10px auto;
     width: 150px;
-    border-radius: 100px;
+    border-radius: 100%;
     border: 1px solid black;
+    transition: 0.3s;
 }
 
-hr {
-    color: red;
+.linkTarjeta {
+    text-decoration: none;
+    color: black;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.linkTarjeta:hover {
+    font-size: 17px;
+    
+}
+
+.linkTarjeta:hover img {
+    width: 160px;
 }
