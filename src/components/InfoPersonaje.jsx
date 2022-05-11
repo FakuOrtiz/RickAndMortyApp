@@ -1,7 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "../styles/InfoPersonajes.css";
 
 export default function InfoPersonaje({ personaje }) {
+
+  const history = useHistory();
+
   function handleStatus(status) {
     switch (status) {
       case "Alive":
@@ -57,6 +61,8 @@ export default function InfoPersonaje({ personaje }) {
   }
 
   return (
+    <div>
+    <button onClick={() => history.goBack()}>Atrás</button>
     <div className="contenedorInfo">
       <img className="imagenInfo" src={personaje.image}></img>
       <h3>{personaje.name}</h3>
@@ -77,6 +83,7 @@ export default function InfoPersonaje({ personaje }) {
         <span>Última localización conocida:</span>{" "}
         {handleOrigenAndLocation(personaje.location.name)}
       </div>
+    </div>
     </div>
   );
 }

@@ -52,7 +52,7 @@ function App() {
 
   return (
       <div className="App">
-        <NavBar onSearch={onSearch} />
+        <NavBar onSearch={onSearch} fecthCharacters={fecthCharacters} />
         <Switch>
           <Route path="/personaje/:id">
             {({match}) => <InfoPersonaje personaje={onFilter(match.params.id)}  />}

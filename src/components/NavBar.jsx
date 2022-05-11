@@ -2,12 +2,16 @@ import React from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import "../styles/NavBar.css";
+import App from "../App";
 
-export default function NavBar({ onSearch }) {
+export default function NavBar({ onSearch, fecthCharacters}) {
+
+  let urlPage1 = "https://rickandmortyapi.com/api/character?page=1";
+
   return (
     <div className="contenedor">
       <h3 className="titulo">
-        <NavLink className="tituloNavLink" to="/">
+        <NavLink className="tituloNavLink" to="/" onClick={() => fecthCharacters(urlPage1)}>
           RICK AND MORTY APP
         </NavLink>
       </h3>
