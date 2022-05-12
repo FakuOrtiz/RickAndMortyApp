@@ -3,19 +3,16 @@ import { useHistory } from "react-router-dom";
 import "../styles/InfoPersonajes.css";
 
 export default function InfoPersonaje({ personaje }) {
-
   const history = useHistory();
 
-  function handleStatus(status) {
-    switch (status) {
+  function handleStatus(estado) {
+    switch (estado) {
       case "Alive":
-        return "Vivo";
-      case "unknown":
-        return "Desconocido";
+        return <p className="vivo">Vivo</p>;
       case "Dead":
-        return "Muerto";
+        return <p className="muerto">Muerto</p>;
       default:
-        return status;
+        return <p className="desconocido">Desconocido</p>;
     }
   }
 
@@ -39,17 +36,19 @@ export default function InfoPersonaje({ personaje }) {
   function handleGenero(genero) {
     switch (genero) {
       case "Male":
-        return "Hombre";
+        return <p className="masculino">♂️</p>;
       case "Female":
-        return "Mujer";
+        return <p className="femenino">♀️</p>;
       case "Genderless":
-        return "Sin género";
+        return <p className="sinGenero">⚧︎</p>;
       case "unknown":
-        return "Desconocido";
+        return <p className="genDesconocido">Desconocido</p>;
       default:
         return genero;
     }
   }
+
+  //♀️ ♂️ ⚧︎
 
   function handleOrigenAndLocation(dato) {
     switch (dato) {
@@ -62,28 +61,27 @@ export default function InfoPersonaje({ personaje }) {
 
   return (
     <div>
-    <button onClick={() => history.goBack()}>Atrás</button>
-    <div className="contenedorInfo">
-      <img className="imagenInfo" src={personaje.image}></img>
-      <h3>{personaje.name}</h3>
-      <div>
-        <span>Estado:</span> {handleStatus(personaje.status)}
+      <button onClick={() => history.goBack()}>Atrás</button>
+      <div className="contenedorInfo">
+        <img className="imagenInfo" src={personaje.image}></img>
+        <h3>{personaje.name}</h3>
+        <div>
+          {handleStatus(personaje.status)}
+          {handleGenero(personaje.gender)}
+        </div>
+        <div className="contenedorEspecieOrigen">
+          <div className="especie">
+            <b>Especie</b><br/> {handleEspecie(personaje.species)}
+          </div>
+          <div className="origen">
+            <b>Origen</b><br/> {handleOrigenAndLocation(personaje.origin.name)}
+          </div>
+        </div>
+        <div>
+          <b>Última localización conocida</b><br/>
+          {handleOrigenAndLocation(personaje.location.name)}
+        </div>
       </div>
-      <div>
-        <span>Especie:</span> {handleEspecie(personaje.species)}
-      </div>
-      {personaje.type && <p><span>Tipo:</span> {personaje.type}</p>}
-      <div>
-        <span>Género:</span> {handleGenero(personaje.gender)}
-      </div>
-      <div>
-        <span>Origen:</span> {handleOrigenAndLocation(personaje.origin.name)}
-      </div>
-      <div>
-        <span>Última localización conocida:</span>{" "}
-        {handleOrigenAndLocation(personaje.location.name)}
-      </div>
-    </div>
     </div>
   );
 }

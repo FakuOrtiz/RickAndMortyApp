@@ -1,6 +1,7 @@
 .contenedorInfo {
     display: grid;
     text-align: center;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 25px;
     margin: 20px auto;
@@ -17,10 +18,96 @@
     border: 1px solid black;
 }
 
-span {
-    text-decoration: underline;
-}
-
 .parrafosInfo {
     text-align: left;
+}
+
+.vivo {
+    background-color: green;
+    color: white;
+    width: 50px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.muerto {
+    background-color: red;
+    color: white;
+    width: 65px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.desconocido {
+    background-color: gray;
+    color: white;
+    width: 115px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.masculino {
+    background-color: dodgerblue;
+    color: white;
+    width: 25px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.femenino {
+    background-color: fuchsia;
+    color: white;
+    width: 25px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.sinGenero {
+    background-color: orange;
+    color: white;
+    width: 25px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.genDesconocido {
+    background-color: gray;
+    color: white;
+    width: 115px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.contenedorEspecieOrigen {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 997px) {
+    .contenedorEspecieOrigen {
+        grid-template-columns: 140px 140px;
+    }
+}
+
+.especie {
+    grid-column-start: 1;
+}
+
+.origen {
+    grid-column-start: 2;
 }
