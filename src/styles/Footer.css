@@ -11,14 +11,8 @@ footer {
     grid-template-columns: 1fr 1fr;
 }
 
-.twitter {
+.github {
     margin-left: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.instagram {
-    margin-left: 5px;
     text-decoration: none;
     color: black;
 }

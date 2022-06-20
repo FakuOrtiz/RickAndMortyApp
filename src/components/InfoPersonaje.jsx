@@ -48,8 +48,6 @@ export default function InfoPersonaje({ personaje }) {
     }
   }
 
-  //♀️ ♂️ ⚧︎
-
   function handleOrigenAndLocation(dato) {
     switch (dato) {
       case "unknown":
